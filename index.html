@@ -22,6 +22,10 @@
 				({{idx + 1}}) {{toUpperCase(note)}}
 				<button class="btn danger" @click="removeNote(idx, $event)">Delete</button>
 			</li>
+			<hr/>
+			<li>
+				<strong>Total: {{notes.length}}</strong>
+			</li>
 		</ul>
 		<div v-else>There are no notes. Please, add the first one.</div>
 	</div>
