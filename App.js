@@ -7,4 +7,4 @@ const App = {
     }
 }
 
-const app = Vue.createApp(App).mount('#application')
+Vue.createApp(App).mount('#application')
