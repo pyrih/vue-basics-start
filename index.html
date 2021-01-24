@@ -10,10 +10,9 @@
 
 <div class="container pt-1" id="app">
 	<div class="card">
-		<h1>{{title}}</h1>
+		<h1 :style="{color: name.length < 5 ? 'red' : 'green'}">{{title}}</h1>
 		<div class="form-control">
-			<input type="text" :placeholder="holder" :value="name"
-				   @input="inputChangeHandler" @keypress.enter="addNewNote"/>
+			<input type="text" :placeholder="holder" v-model="name" @keypress.enter="addNewNote"/>
 		</div>
 		<button class="btn" @click="addNewNote">Add</button>
 		<hr/>
@@ -24,7 +23,7 @@
 			</li>
 			<hr/>
 			<li>
-				<strong>Total: {{notes.length}}</strong>
+				<strong>Total: {{notes.length}}</strong> | Doubled: {{doubleCountComputed}}
 			</li>
 		</ul>
 		<div v-else>There are no notes. Please, add the first one.</div>
