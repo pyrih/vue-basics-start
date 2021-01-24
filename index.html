@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-wirth, initial-scale=1.0"/>
-    <title>Vue Basics</title>
-    <link rel="stylesheet" href="theme.css">
-</head>
-<body>
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Vue Basics</title>
+		<link rel="stylesheet" href="theme.css">
+	</head>
+	<body>
+		<div class="container pt-5" id="application">
+			<div class="card center">
+				<h1>Counter: {{counter}}</h1>
+				<div>
+					<button class="btn primary">Add</button>
+					<button class="btn danger">Subtract</button>
+				</div>
+			</div>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script src="App.js"></script>
+	</body>
 </html>
