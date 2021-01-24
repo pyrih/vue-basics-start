@@ -9,10 +9,10 @@
 	<body>
 		<div class="container pt-5" id="application">
 			<div class="card center">
-				<h1>Counter: {{counter}}</h1>
+				<h1>{{title}}: {{counter}}</h1>
 				<div>
-					<button class="btn primary">Add</button>
-					<button class="btn danger">Subtract</button>
+					<button class="btn primary" v-on:click="counter++">Add</button>
+					<button class="btn danger" v-on:click="counter--">Subtract</button>
 				</div>
 			</div>
 		</div>
