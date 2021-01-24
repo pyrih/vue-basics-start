@@ -1,10 +1,29 @@
 const App = {
     data() {
         return {
-            counter: 0,
-            title: 'Counter'
+            holder: 'Enter title',
+            title: 'Notes',
+            name: '',
+            notes: ['Note One', 'Note Two', 'Note Three']
+        }
+    },
+    methods: {
+        inputChangeHandler(event) {
+            this.name = event.target.value
+        },
+        addNewNote() {
+            if (this.name !== '') {
+                this.notes.push(this.name)
+                this.name = ''
+            }
+        },
+        removeNote(idx, event) {
+            this.notes.splice(idx, 1)
+        },
+        toUpperCase(item) {
+            return item.toUpperCase()
         }
     }
 }
 
-const app = Vue.createApp(App).mount('#application')
+Vue.createApp(App).mount('#app')
