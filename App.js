@@ -7,4 +7,4 @@ const App = {
     }
 }
 
-Vue.createApp(App).mount('#application')
+Vue.createApp(App).mount('#app')
